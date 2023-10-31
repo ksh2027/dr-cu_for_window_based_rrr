@@ -51,7 +51,7 @@ void GridGraphBuilder::run() {
     }
 
     // 4. Add wrong way connection
-    addWrongWayConn();
+    // addWrongWayConn();
 
     // 5. Add intra-guide connection
     for (unsigned b = 0; b < localNet.gridRouteGuides.size(); b++) connectGuide(b);

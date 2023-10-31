@@ -249,17 +249,17 @@ void Router::finish() {
     if (db::setting.multiNetVerbose >= +db::VerboseLevelT::MIDDLE) {
         printlog("postMT", postMT);
     }
-    // final open fix
-    if (db::setting.fixOpenBySST) {
-        int count = 0;
-        for (auto& net : database.nets) {
-            if (net.defWireSegments.empty() && net.numOfPins() > 1) {
-                connectBySTT(net);
-                count++;
-            }
-        }
-        if (count > 0) log() << "#nets connected by STT: " << count << std::endl;
-    }
+    // // final open fix
+    // if (db::setting.fixOpenBySST) {
+    //     int count = 0;
+    //     for (auto& net : database.nets) {
+    //         if (net.defWireSegments.empty() && net.numOfPins() > 1) {
+    //             connectBySTT(net);
+    //             count++;
+    //         }
+    //     }
+    //     if (count > 0) log() << "#nets connected by STT: " << count << std::endl;
+    // }
 }
 
 void Router::unfinish() {

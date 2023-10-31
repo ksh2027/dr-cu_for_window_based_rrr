@@ -52,15 +52,15 @@ public:
     //  2. routing preference
     static constexpr int weightOutOfGuideWirelength = 1;
     static constexpr int weightOutOfGuideViaNum = 1;
-    static constexpr double weightOffTrackWirelength = 0.5;
-    static constexpr int weightOffTrackViaNum = 1;
-    static constexpr int weightWrongWayWirelength = 1;
+    static constexpr double weightOffTrackWirelength = 500;
+    static constexpr int weightOffTrackViaNum = 1000;
+    static constexpr int weightWrongWayWirelength = 1000;
     //  3. violation
     //  normalized by square of M2 pitch
-    static constexpr int weightShortArea = 500;
+    static constexpr int weightShortArea = 50;
     //  including wire spacing, eol spacing, cut spacing
-    static constexpr int weightSpaceVioNum = 500;
-    static constexpr int weightMinAreaVioNum = 500;
+    static constexpr int weightSpaceVioNum = 0;
+    static constexpr int weightMinAreaVioNum = 0;
 
     void makeItSilent();
     void adapt();

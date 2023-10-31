@@ -124,6 +124,7 @@ BoxOnLayer LayerList::getMetalRectForbidRegion(const BoxOnLayer& metalRect, Aggr
         margin[dir] = layer.getSpace(metalRect, dir, aggr);
         margin[dir] += layer.width / 2;
     }
+    //  mark
     return {metalRect.layerIdx,
             metalRect.lx() - margin[0],
             metalRect.ly() - margin[1],

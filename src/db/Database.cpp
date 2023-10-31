@@ -630,10 +630,10 @@ void Database::getGridPinAccessBoxes(const Net& net, vector<vector<db::GridBoxOn
             }
             // One-pitch extension
             auto pinExtension = pinAccessBox;
-            for (int d = 0; d < 2; ++d) {
-                pinExtension[d].low -= pitch;
-                pinExtension[d].high += pitch;
-            }
+            // for (int d = 0; d < 2; ++d) {
+            //     pinExtension[d].low -= pitch;
+            //     pinExtension[d].high += pitch;
+            // }
             const db::GridBoxOnLayer& gridPinExtension = rangeSearch(pinExtension);
             for (int trackIdx = gridPinExtension.trackRange.low; trackIdx <= gridPinExtension.trackRange.high;
                  ++trackIdx) {
